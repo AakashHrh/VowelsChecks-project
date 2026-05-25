@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- QUESTION ONR:-Create a functoin keyword that takes a string as n argument and returnes of vowels in the sting -->
+
+    <script>
+      function CountstrVowel(str) {
+        let count = 0;
+        let freq = { a: 0, e: 0, i: 0, o: 0, u: 0 };
+        for (char of str) {
+          if (
+            // char === "a" ||
+            // char === "e" ||
+            // char === "o" ||
+            // char === "i" ||
+            // char === "u"
+            "aeiou".includes(char) // same logic both for compaering string
+          ) {
+            count++;
+            freq[char]++;
+          }
+        }
+        return { total: count, frequency: freq };
+      }
+      let result = CountstrVowel("Aakash Harijan Apna College");
+      console.log("Total vowels COunt  in that = " + result.total);
+      console.log("Total vowels iLatter in that = " , result.frequency);
+    </script>
+  </body>
+</html>
